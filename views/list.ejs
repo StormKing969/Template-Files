@@ -7,8 +7,13 @@
     <title>TO DO LIST</title>
 </head>
 <body>
-    <!-- Marker that tell ejs to replace the place with a variable -->
-    <h1>Today is a <%= kindOfDay %></h1>
+    <!-- In case we want to run JAVA in html -->
+    <% if (kindOfDay === "Saturday" || kindOfDay === "Sunday") { %> 
+        <!-- Marker that tell ejs to replace the place with a variable -->
+        <h1 style="color: blue;">Today is a <%= kindOfDay %></h1>
+    <% } else {  %>
+        <h1 style="color: red;">Today is a <%= kindOfDay %></h1>
+    <% } %> 
 
 </body>
 </html>
